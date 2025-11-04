@@ -1,0 +1,14 @@
+.texto {
+    width: 405px;
+    height: 250px;
+    background: #b3a084;
+    position: relative;
+    top: 530px;
+    left: 900px;
+    font-family: Arial Verdona ;
+}
+.h1{
+    font-size: 3rm;
+    font-style:normal;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

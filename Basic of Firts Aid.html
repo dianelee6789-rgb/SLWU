@@ -1,0 +1,354 @@
+<DOCTYPE! html>
+    <head>
+        <link rel="stylesheet" type="text/css" href=".cuadro {.css">
+        <link href="body.css" rel="stylesheet" type="text/css" />
+        <link href="html {.css" rel="stylesheet" type="text/css" />
+        <link rel="icon" href="logo.png">
+        <div class="html "></div>
+        <div class="body "></div>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <head>
+          <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f3f6fb;
+            color: #333;
+        }
+
+        /* Encabezado */
+        header {
+            background: linear-gradient(135deg, #89c2f9, #f28b82);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        tittle {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  font-weight: 600;
+  color: white; /* azul oscuro suave */
+  text-align: center;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  letter-spacing: 2px;
+  margin-top: 30px;
+  animation: fadeGlow 3s ease-in-out infinite alternate;
+}
+@keyframes fadeGlow {
+            0% { text-shadow: 0 0 5px #fff, 0 0 10px #89c2f9; }
+            100% { text-shadow: 0 0 20px #fff, 0 0 30px #f28b82; }
+        }
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #3b82f6; /* azul pastel suave */
+  text-align: center;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
+  margin-top: 30px;
+}
+
+
+
+        header p {
+            font-size: 1.1rem;
+        }
+
+        /* Navegación */
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 0 0 15px 15px;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .menu > li {
+            position: relative;
+        }
+
+        .menu > li > a {
+            display: block;
+            padding: 10px 25px;
+            color: #2d5b8c;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .menu > li > a:hover {
+            background-color: #e3efff;
+            border-radius: 10px;
+            color: #ff4b4b;
+        }
+
+        /* Submenú */
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            top: 100%;
+            left: 0;
+            min-width: 180px;
+        }
+
+        .submenu li a {
+            padding: 10px 20px;
+            display: block;
+            color: #2d5b8c;
+        }
+
+        .submenu li a:hover {
+            background-color: #ffeded;
+            color: #d63c3c;
+        }
+
+        .menu li:hover .submenu {
+            display: block;
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Secciones en cajas */
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+        }
+
+        .section h2 {
+            color: #2d5b8c;
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            line-height: 1.6;
+        }
+
+        /* Tarjetas */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .card {
+            background: #f9fbff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            background-color: #fff5f5;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: #ff4b4b;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #2d5b8c;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            margin-top: 2rem;
+        }
+
+        /* Animaciones suaves */
+        .section, .card, header, nav {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(15px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            .menu > li > a {
+                padding: 10px 15px;
+            }
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #FFB3BA, #BAE1FF, #dbe4db); /* Rosa pastel, azul pastel, verde pastel */
+            background-size: 400% 400%;
+            animation: colorChange 8s ease-in-out infinite;
+            font-family: Arial, sans-serif;
+        }
+        
+        @keyframes colorChange {
+            0% { background-position: 0% 50%; } /* Rosa pastel */
+            33% { background-position: 100% 50%; } /* Azul pastel */
+            66% { background-position: 0% 50%; } /* Verde pastel */
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+    </head>
+        <header>
+        <center>
+          <div class="tittle">
+        <tittle>SAVE LIVES WITH US</tittle>
+          </div>
+    </center>
+  </header>
+    </head>
+    
+</html>
+<html>
+    <head>
+        <title>Menu Desplegable</title>
+        <link rel="stylesheet" type="text/css" href="body {.css">
+        <body> 
+            <nav>
+                <div class="menu"></div>
+                <ul class="menu">
+                  <li><a href="Untitled-1.html">Home</a>
+                  <ul class="submenu">
+                    <li><a href="#INTRODUCTION">Intrduction</a></li>
+                      <li><a href="#TIPS OF ACCIDENTS">Tips of Accidents</a></li>
+                      <li><a href="#BASIC OF FIRST AID">Basic of Firts Aid</a></li>
+                      <li><a href="#METHODS">Methods</a></li>
+                      <li><a href="#ABOUT OUR PROYECT">About our proyect</a></li>
+                    </ul></li>
+                  <li>
+                    <a href="Firts Aid.html">Who are we?</a>
+                    <li>
+                    <a href="Basic of Firts Aid.html">Tecnology solution</a>
+                  </li>
+                  <li><a href="App Information.html">Evidences</a>
+                  <ul class="submenu">
+                    <li><a href="#EVIDENCES">GALLERY</a></li>
+                      <li><a href="#PHOTOS">Photos</a></li>
+                    </ul></li>
+                  <li><a href="Social Media.html">Perfils</a></li>
+                  <li>
+                    <a href="Contenit.html">Contact</a>
+                  </li>
+                </ul>
+              </nav>
+              <style>
+  
+  .gt-buttons {
+    position: fixed; right: 140px; bottom: 20px; display: flex; gap: 8px; z-index: 9999;
+  }
+  .gt-btn {
+    border: none; padding: 6px 10px; border-radius: 6px; cursor: pointer;
+  }
+  .gt-btn.en { background:#f28b82; color:#fff; }
+  .gt-btn.es { background:#89c2f9; color:#fff; }
+
+  
+  .goog-te-banner-frame.skiptranslate, .goog-te-gadget span, .goog-te-balloon-frame { display:none !important; }
+  body { top: 0 !important; }
+  #google_translate_element { display:none; } /* ocultamos el combo */
+</style>
+
+
+<div id="google_translate_element"></div>
+
+
+<div class="gt-buttons">
+  <button class="gt-btn en" onclick="setLang('en')">English</button>
+  <button class="gt-btn es" onclick="setLang('es')">Spanish</button>
+</div>
+
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,es',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  function setLang(lang) {
+    const combo = document.querySelector('.goog-te-combo');
+    if (!combo) return;
+
+    // Si el usuario presiona "English", se fuerza el reinicio al idioma original
+    if (lang === 'en') {
+      combo.value = 'en';
+      combo.dispatchEvent(new Event('change'));
+
+      // Google Translate necesita un pequeño retraso para volver al idioma original
+      setTimeout(() => {
+        const iframe = document.querySelector('iframe.goog-te-banner-frame');
+        if (iframe) iframe.style.display = 'none';
+      }, 500);
+    } 
+    else {
+      combo.value = lang;
+      combo.dispatchEvent(new Event('change'));
+    }
+  }
+</script>
+          <H1>TECNOLOGY SOLUTION</H1>
+          <div class="container">
+          <div class="section">
+          <p>Our tecnology solution is:</p>
+          <div class="cards">
+          <div class="card">
+            <h3>APP</h3>
+            <p>The app contain thinks like in this page, but the diference, you could be have a account and activities are like: mini games, trivia and another information about the theme <u>https://save-lives-with-us-0p2pxk.flutterflow.app</u></p>
+          </div>
+          </div>
+          </div>
+          </div>
+          <footer>
+        <p>&copy; 2025 Save Lives With Us. </p>
+    </footer>

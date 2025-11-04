@@ -1,0 +1,587 @@
+<DOCTYPE! html>
+    <head>
+        <link rel="stylesheet" type="text/css" href=".cuadro {.css">
+        <link href="body.css" rel="stylesheet" type="text/css" />
+        <link href="html {.css" rel="stylesheet" type="text/css" />
+        <link rel="icon" href="logo.png">
+        <div class="html "></div>
+        <div class="body "></div>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <head>
+              <link rel="icon" href="LOGO.png" type="image/x-icon">
+          <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f3f6fb;
+            color: #333;
+        }
+
+        /* Encabezado */
+        header {
+            background: linear-gradient(135deg, #89c2f9, #f28b82);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        tittle {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  font-weight: 600;
+  color: white; /* azul oscuro suave */
+  text-align: center;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  letter-spacing: 2px;
+  margin-top: 30px;
+  animation: fadeGlow 3s ease-in-out infinite alternate;
+}
+@keyframes fadeGlow {
+            0% { text-shadow: 0 0 5px #fff, 0 0 10px #89c2f9; }
+            100% { text-shadow: 0 0 20px #fff, 0 0 30px #f28b82; }
+        }
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #3b82f6; /* azul pastel suave */
+  text-align: center;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
+  margin-top: 30px;
+}
+ header p {
+            font-size: 1.1rem;
+        }
+
+        /* Navegación */
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 0 0 15px 15px;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .menu > li {
+            position: relative;
+        }
+
+        .menu > li > a {
+            display: block;
+            padding: 10px 25px;
+            color: #2d5b8c;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .menu > li > a:hover {
+            background-color: #e3efff;
+            border-radius: 10px;
+            color: #ff4b4b;
+        }
+
+        /* Submenú */
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            top: 100%;
+            left: 0;
+            min-width: 180px;
+        }
+
+        .submenu li a {
+            padding: 10px 20px;
+            display: block;
+            color: #2d5b8c;
+        }
+
+        .submenu li a:hover {
+            background-color: #ffeded;
+            color: #d63c3c;
+        }
+
+        .menu li:hover .submenu {
+            display: block;
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Secciones en cajas */
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+        }
+
+        .section h2 {
+            color: #2d5b8c;
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            line-height: 1.6;
+        }
+
+        /* Tarjetas */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .card {
+            background: #f9fbff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            background-color: #fff5f5;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: #ff4b4b;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #2d5b8c;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            margin-top: 2rem;
+        }
+
+        /* Animaciones suaves */
+        .section, .card, header, nav {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(15px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            .menu > li > a {
+                padding: 10px 15px;
+            }
+        }
+        /* Columna de botones */
+  .botones {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  /* Cuadro de contenido */
+  .cuadro {
+    background-color: #0d1b26;
+    border: 2px solid #0ca6a6;
+    border-radius: 10px;
+    width: 350px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cuadro img {
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+    </style>
+    </head>
+        <header>
+        <center>
+          <div class="tittle">
+          <div class="banner">
+        <tittle>SAVE LIVES WITH US</tittle>
+          </div>
+          </div>
+    </center>
+  </header>
+    </head>
+    
+</html>
+<html>
+    <head>
+        <title>Menu Desplegable</title>
+        <link rel="stylesheet" type="text/css" href="body {.css">
+        <body> 
+        <nav>
+            <div class="menu"></div>
+            <ul class="menu">
+              <li><a href="Untitled-1.html">Home</a>
+              <ul class="submenu">
+                <li><a href="#INTRODUCTION">Intrduction</a></li>
+                  <li><a href="#TIPS OF ACCIDENTS">Tips of Accidents</a></li>
+                  <li><a href="#BASIC OF FIRST AID">Basic of Firts Aid</a></li>
+                  <li><a href="#METHODS">Methods</a></li>
+                  <li><a href="#ABOUT OUR PROYECT">About our proyect</a></li>
+                </ul></li>
+              <li>
+                <a href="Firts Aid.html">Who are we?</a>
+                </li>
+                <li>
+                <a href="Basic of Firts Aid.html">Tecnology solution</a>
+              </li>
+              <li><a href="App Information.html">Evidences</a>
+              <ul class="submenu">
+                <li><a href="#EVIDENCES">GALLERY</a></li>
+                  <li><a href="#PHOTOS">Photos</a></li>
+                </ul></li>
+              <li><a href="Social Media.html">Perfils</a></li>
+              <li>
+                <a href="Contenit.html">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <style>
+  
+  .gt-buttons {
+    position: fixed; right: 140px; bottom: 20px; display: flex; gap: 8px; z-index: 9999;
+  }
+  .gt-btn {
+    border: none; padding: 6px 10px; border-radius: 6px; cursor: pointer;
+  }
+  .gt-btn.en { background:#f28b82; color:#fff; }
+  .gt-btn.es { background:#89c2f9; color:#fff; }
+
+  
+  .goog-te-banner-frame.skiptranslate, .goog-te-gadget span, .goog-te-balloon-frame { display:none !important; }
+  body { top: 0 !important; }
+  #google_translate_element { display:none; } /* ocultamos el combo */
+</style>
+
+
+<div id="google_translate_element"></div>
+
+
+<div class="gt-buttons">
+  <button class="gt-btn en" onclick="setLang('en')">English</button>
+  <button class="gt-btn es" onclick="setLang('es')">Spanish</button>
+</div>
+
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,es',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  function setLang(lang) {
+    const combo = document.querySelector('.goog-te-combo');
+    if (!combo) return;
+
+    // Si el usuario presiona "English", se fuerza el reinicio al idioma original
+    if (lang === 'en') {
+      combo.value = 'en';
+      combo.dispatchEvent(new Event('change'));
+
+      // Google Translate necesita un pequeño retraso para volver al idioma original
+      setTimeout(() => {
+        const iframe = document.querySelector('iframe.goog-te-banner-frame');
+        if (iframe) iframe.style.display = 'none';
+      }, 500);
+    } 
+    else {
+      combo.value = lang;
+      combo.dispatchEvent(new Event('change'));
+    }
+  }
+</script>
+          <center>
+            <div id="INTRODUCTION" class="h1">
+          <h1>INTRODUCTION</h1>   
+          </div>
+          </center>
+          <body>
+            <div class="container">
+              <div class="section">
+          <h2>WELCOME TO SAVE LIVES WITH US </h2>      
+          <p>Welcome to save lives with us, were we show the basic of first aid. Our goal is to teach the children about the basic of first aid and what to do in an accident </p>
+          </div>
+          <div class="section">
+            <img src="Pet-Photoroom.png" width="350" height="500" >
+          </div>
+          <div class="section">
+            <img src="logo(1).png" width="350" height="500" >
+          </div>
+            <div class="section">
+          <h2>WHAT IS FIRST AID? </h2>      
+          <p>first aid is a immediate emergency care provided to an injured person before professional medical help arrives. Firts aid include a kit of emergency that have elemnts that could help the person, depending of the accident. The accidents could be small injuries like cuts and scrapes, as well as critial life-saving interventions such as CPR</p>
+          </div>
+          <div id="TIPS OF ACCIDENTS" class="section">
+          <h1>TIPS OF ACCIDENTS</h1>      
+          <p>In the school, the children can have unexpected accidents, from light to serious. These are comun accidents:</p>
+<h2>FALLS OR STUMBLINGS</h2>
+<p>In our school life, in unexpected moment, we have a fall that run very fast or a feet tangle. Usually, this accidents dont pass to bigger, but sometimes this falls genarate lessions 
+</p>
+<h2>SPORTS INJURIES</h2>
+<p>The sports are very important for the children physical development, but in some schools dont have the economy for courts protection, for this reason, the children knocking other children with balls, usually the girls. </p>
+<p>In this accidents, the children were are hurts, suffer lessons</p>
+<h2>KNOKINGS OR HURTS IN THE BREAKOUT TIME </h2>
+<p>Sometimes, the students after of discuss, they fix them problems with cuffs, and the result of these confrontations, they it ends with hurts</p>
+<img src="accidente.jpg" width="400" height="200">
+<h2>CHOKING IN THE RESTAURANT SCHOOL</h2>
+<p>When you eat very fast, you can have one of this two things:</p>
+<p>-You can have a bellayche</p>
+<p>-You can have a choking</p>
+<p>This accidents hardly ever pass, exception from irresponsible teachers or for hurry</p>
+<h2>CARS ACCIDENT</h2>
+<p>This is one of serious accidents, by not having security in the cars park, the children can enter the parking and will have a accident. This accident hardly ever pass</p>
+<h2>OBJECTS ACCIDENT</h2>
+<p>The children are curious and playful, they will take like scissors or pencils for to play, they will hurt with his classmate</p>
+<img src="accident.jpg" width="400" height="200">
+</div>
+<div id="BASIC OF FIRST AID" class="section">
+          <h1>BASIC OF FIRTS AID</h1>    
+          <p>When a person its hurts, in a grave nivel, you can make this things: </p>
+<p><b>1. Evaluate the situation:</b> The firts thing if you can make is evaluate the conditions person hurts and see if you can get closer with the person </p>
+<p><b>2. Calls the emergences:</b>In this situations, its very important calls the emergences for notificate about the accident and get information
+</p>
+<p><b>3. Assure the safety:</b>You will assure the security of the victim of other dangerous and reassure his</p>
+<align text="left"><p>The children can learn not only basic first aid, they can learn the importance of care others, help a friend or someone of family, and the children will feel good with themselves </p></align>
+<img src="security.png" width="300" height="200">
+</div>
+<div id="METHODS" class="section">
+          <h1>METHODS</h1>    
+          <p>"B-But what happend if the emergences dont comming? what do I have to do?"</p>
+          <p>Dont worry, We are here for solution your problem, you can make this methods if the emergences: </p>
+<p><b>1. Assure his safety:</b>Firts, before to touch his, you will verify the area were the person is found  will be safe</p>
+<p><b>2. Comprobant the breath:</b>Comprobant if the person is breathing</p>
+<p><b>3. Lateral safety position:</b> If the person are inconcience and but breathe, put sideway with the head light inclined to back for keep the airways open
+</p>
+<p><b>4. Wacth the breath:</b>Assure his breath</p>
+<p><b>5. Dont give them anything:</b>Dont give water, medicaments or food, they will chocking</p>
+<align text="left"><p>The children can learn not only basic first aid, they can learn the importance of care others, help a friend or someone of family, and the children will feel good with themselves </p></align>
+<img src="emergency.jpg" width="500" height="300">
+</div>
+<center>
+  <div id="ABOUT OUR PROYECT" class="section">
+  <h1>ABOUT OUR PROYECT..</h1>
+  </div>
+</div>
+</center>
+  <center>
+  
+  <style>
+    button {
+  background-color: #f28b82; 
+  border: 2px solid #ffffff;
+  border-radius: 8px; 
+  padding: 12px 20px; 
+  margin: 5px 0; 
+  position: relative;
+  top: 20px;
+  left: -300px;
+  font-size: 26px; 
+  font-weight: bold; 
+  color: #E0E0E0; 
+  cursor: pointer; 
+  transition: all 0.3s ease; 
+  display: block;
+  width: 500px; 
+  text-align: center; 
+}
+
+
+button:hover {
+  background-color: #89c2f9; 
+  border-color: #2b2e31; 
+  transform: translateY(-2px); 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+}
+
+
+button:active {
+  transform: translateY(0px); 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+
+.contenedor-principal {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contenedor-botones {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  position: relative;
+  left: 20px;
+  top: 50px;
+}
+
+
+
+
+#contenedor {
+  position: relative;
+  top: -390px;
+  left: 800px;
+  width: 700px;
+  height: 400px;
+  background-color: white;
+  border: 10px solid #f28b82;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#contenedor img {
+  max-width: 600px;
+  max-height: 500px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #FFB3BA, #BAE1FF, #dbe4db); /* Rosa pastel, azul pastel, verde pastel */
+            background-size: 400% 400%;
+            animation: colorChange 8s ease-in-out infinite;
+            font-family: Arial, sans-serif;
+        }
+        
+        @keyframes colorChange {
+            0% { background-position: 0% 50%; } /* Rosa pastel */
+            33% { background-position: 100% 50%; } /* Azul pastel */
+            66% { background-position: 0% 50%; } /* Verde pastel */
+            100% { background-position: 0% 50%; }
+        }
+        
+        .banner {
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background: none;
+        }
+        .banner p {
+            margin: 0;
+        }
+        
+
+</style>
+  
+
+  <div class="contenedor">
+    <div class="botones">
+      <div id="f2c1" style="list-style-type:none;">
+  <il>
+  
+  <button onclick="mostrarImagen(1)" class="myButton"> Problematic</button>
+  <button onclick="mostrarImagen(2)" class="myButton">Vision</button>
+  <button onclick="mostrarImagen(3)" class="myButton">Mision </button>
+  <button onclick="mostrarImagen(4)" class="myButton">General Objetive </button>
+  <button onclick="mostrarImagen(5)" class="myButton">Specific Objetive </button>
+  <button onclick="mostrarImagen(6)" class="mybutton"> Theorical Framework</button>
+
+</il>
+</div>
+<div id="contenedor">
+  <img id="img1" src="Problema.jpg" alt="Imagen 1" style="display:none; width:1200px;">
+  <img id="img2" src="Vision.jpg" alt="Imagen 2" style="display:none; width:1200px;">
+  <img id="img3" src="Mision.jpg" alt="Imagen 3" style="display:none; width:1200px;">
+  <img id="img4" src="General Objetive.jpg" alt="Imagen 4" style="display:none; width:1200px;">
+  <img id="img5" src="Specific.jpg" alt="Imagen 5" style="display:none; width:1200px;">
+  <img id="img6" src="Mapa.png" alt="Imagen 6" style="display:none; width:1200px;">
+</div>
+  
+
+  <script >
+    function mostrarImagen(num) {
+  
+  document.getElementById("img1").style.display = "none";
+  document.getElementById("img2").style.display = "none";
+  document.getElementById("img3").style.display = "none";
+  document.getElementById("img4").style.display = "none";
+  document.getElementById("img5").style.display = "none";
+  document.getElementById("img6").style.display = "none";
+
+  
+  document.getElementById("img" + num).style.display = "block";
+}
+
+  </script>
+  </div>
+  </center>
+</body>
+</html>
+          </html>
+          <footer>
+        <p>&copy; 2025 Save Lives With Us. </p>
+    </footer>
+          </body>
+</html>
